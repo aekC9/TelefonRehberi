@@ -39,6 +39,7 @@ namespace TelefonRehberi
                         Console.Write("Telefon Nuamrası: ");
                         string phoneNumber = Console.ReadLine();
                         phoneBook.Add(new Person { Name = name, SurName = surName, PhoneNumber = phoneNumber });
+                        Console.WriteLine("Yeni kayıt başarıyla eklendi");
                         break;
                     case 2:
                         Console.Write("Silmek istediğiniz kişinin adını giriniz: ");
