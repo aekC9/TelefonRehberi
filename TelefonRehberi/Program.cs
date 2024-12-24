@@ -8,18 +8,19 @@ namespace TelefonRehberi
 {
     internal class Program
     {
+        static List<Person> phoneBook = new List<Person>
+        {
+            new Person { Name = "Ayşe", SurName = "Yılmaz", PhoneNumber = "12345643215" },
+            new Person { Name = "Ali", SurName = "Demir", PhoneNumber = "12345643216" },
+            new Person { Name = "Mehmet", SurName = "Kaya", PhoneNumber = "12345643217" },
+            new Person { Name = "Fatma", SurName = "Arslan", PhoneNumber = "12345643218" },
+            new Person { Name = "Bilal", SurName = "Aslan", PhoneNumber = "12345643219" }
+        };
         static void Main(string[] args)
         {
             bool exit = false;
             while (!exit)
             {
-                List<Person> phoneBook = new List<Person>();
-                phoneBook.Add(new Person { Name = "Ayşe", SurName = "Yılmaz", PhoneNumber = "12345643215" });
-                phoneBook.Add(new Person { Name = "Ali", SurName = "Demir", PhoneNumber = "12345643216" });
-                phoneBook.Add(new Person { Name = "Mehmet", SurName = "Kaya", PhoneNumber = "12345643217" });
-                phoneBook.Add(new Person { Name = "Fatma", SurName = "Arslan", PhoneNumber = "12345643218" });
-                phoneBook.Add(new Person { Name = "Bilal", SurName = "Aslan", PhoneNumber = "12345643219" });
-
                 Console.WriteLine("Lütfen yapmak istediğiniz işlemi seçiniz:");
                 Console.WriteLine("*****************************************");
                 Console.WriteLine("(1) Yeni Numara Kaydetmek");
@@ -39,7 +40,7 @@ namespace TelefonRehberi
                         Console.Write("Telefon Nuamrası: ");
                         string phoneNumber = Console.ReadLine();
                         phoneBook.Add(new Person { Name = name, SurName = surName, PhoneNumber = phoneNumber });
-                        Console.WriteLine("Yeni kayıt başarıyla eklendi");
+                        Console.WriteLine("Yeni kayıt başarıyla oluşturuldu!");
                         break;
                     case 2:
                         Console.Write("Silmek istediğiniz kişinin adını giriniz: ");
