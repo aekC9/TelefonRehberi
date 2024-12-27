@@ -28,6 +28,7 @@ namespace TelefonRehberi
                 Console.WriteLine("(3) Varolan Numarayı Güncellemek");
                 Console.WriteLine("(4) Rehberi Listelemek");
                 Console.WriteLine("(5) Rehberde Arama Yapmak");
+                Console.WriteLine("(6) Çıkış");
                 Console.WriteLine("*****************************************");
                 int secim = int.Parse(Console.ReadLine());
                 switch (secim)
@@ -123,6 +124,9 @@ namespace TelefonRehberi
                             Console.WriteLine("Aradığınız kriterlere uygun bir kayıt bulunamadı");
                         }
                         break;
+                    case 6:
+                        Console.WriteLine("Çıkış yapılıyor...");
+                        return;
                     default:
                         Console.WriteLine("Hatalı seçim yaptınız.");
                         break;
